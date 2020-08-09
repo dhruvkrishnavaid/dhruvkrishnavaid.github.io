@@ -827,7 +827,7 @@ features
   z-index: 9;
 }
 
-@media (max-width: 991px) {
+@media (min-width:991px) and (max-height:680px) {
   .home-feature {
     padding-bottom: 0px;
     padding-top: 0px;
