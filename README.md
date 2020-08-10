@@ -19,7 +19,7 @@ Please press the fork button on the top - right edge for details on my code of c
 
 ## License
 
-This project is licensed under the GNU GPL License v3.0 - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU GPL License v3.0 - see the [LICENSE.md](LICENSE) file for details
 
 ## Acknowledgments
 
