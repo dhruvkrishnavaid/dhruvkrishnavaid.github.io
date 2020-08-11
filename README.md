@@ -17,6 +17,13 @@ Please press the fork button on the top - right edge for details on my code of c
 
 * **Dhruv Krishna Vaid** - *Full work* - [dhruvkrishnavaid](https://github.com/dhruvkrishnavaid/)
 
+## Follow Me
+
+[@dhruvkrishnavaid - Github](https://github.com/dhruvkrishnavaid/)
+[Cocolandians - Youtube](https://www.youtube.com/channel/UC7JNIjhtuaFv6Z4T0zpy68g/)
+[Dhruv Krishna Vaid - Patreon](https://www.patreon.com/dhruvkrishnavaid/)
+[Cocolandians - Pinterest](https://in.pinterest.com/cocolandians/)
+
 ## License
 
 This project is licensed under the GNU GPL License v3.0 - see the [LICENSE.md](LICENSE) file for details
