@@ -19,10 +19,10 @@ Please press the fork button on the top - right edge for details on my code of c
 
 ## Follow Me
 
-[@dhruvkrishnavaid - Github](https://github.com/dhruvkrishnavaid/)
-[Cocolandians - Youtube](https://www.youtube.com/channel/UC7JNIjhtuaFv6Z4T0zpy68g/)
-[Dhruv Krishna Vaid - Patreon](https://www.patreon.com/dhruvkrishnavaid/)
-[Cocolandians - Pinterest](https://in.pinterest.com/cocolandians/)
+[@dhruvkrishnavaid - Github](https://github.com/dhruvkrishnavaid/)<br>
+[Cocolandians - Youtube](https://www.youtube.com/channel/UC7JNIjhtuaFv6Z4T0zpy68g/)<br>
+[Dhruv Krishna Vaid - Patreon](https://www.patreon.com/dhruvkrishnavaid/)<br>
+[Cocolandians - Pinterest](https://in.pinterest.com/cocolandians/)<br>
 
 ## License
 
