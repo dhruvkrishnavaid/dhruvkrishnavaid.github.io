@@ -22,16 +22,16 @@ Table of contents
 12. preloader
 
 --------------------------------------------- */
-/* 
+/*
 ---------------------------------------------
 font & reset css
---------------------------------------------- 
+---------------------------------------------
 */
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900");
-/* 
+/*
 ---------------------------------------------
 reset
---------------------------------------------- 
+---------------------------------------------
 */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
@@ -101,10 +101,10 @@ ul {
   margin-bottom: 0px;
 }
 
-/* 
+/*
 ---------------------------------------------
 global styles
---------------------------------------------- 
+---------------------------------------------
 */
 html,
 body {
@@ -368,10 +368,10 @@ button.main-button:hover {
 }
 
 
-/* 
+/*
 ---------------------------------------------
 header
---------------------------------------------- 
+---------------------------------------------
 */
 .header-area {
   position: fixed;
@@ -391,6 +391,12 @@ header
   border-radius: 40px;
   min-height: 80px;
   background: #fff;
+}
+
+@media (max-width: 991px) {
+  .header-area .main-nav {
+    border-radius: 30px;
+  }
 }
 
 .header-area .main-nav .logo {
@@ -633,10 +639,23 @@ header
   }
 }
 
-/* 
+.imgsrc {
+  height: 30px;
+  width: 35px;
+  padding: 0px 0px 0px 0px;
+}
+
+@media (max-width: 991px) {
+  .imgsrc .logo {
+    border-bottom: 0px;
+    margin-bottom: 0px;
+    padding: 0px 0px 0px 0px;
+  }
+}
+/*
 ---------------------------------------------
 welcome
---------------------------------------------- 
+---------------------------------------------
 */
 .welcome-area {
   overflow: hidden;
@@ -647,7 +666,7 @@ welcome
   background-image: url(../images/banner-bg.png);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover; 
+  background-size: cover;
   height: 100vh;
 }
 
@@ -745,10 +764,10 @@ welcome
 }
 
 
-/* 
+/*
 ---------------------------------------------
 features
---------------------------------------------- 
+---------------------------------------------
 */
 .features-small-item {
   cursor: pointer;
@@ -835,10 +854,10 @@ features
   }
 }
 
-/* 
+/*
 ---------------------------------------------
 parallax & home seperator
---------------------------------------------- 
+---------------------------------------------
 */
 .mini {
   min-height: 215px;
@@ -1105,10 +1124,10 @@ parallax & home seperator
   }
 }
 
-/* 
+/*
 ---------------------------------------------
 team
---------------------------------------------- 
+---------------------------------------------
 */
 .team-item {
   background: #fff;
@@ -1191,10 +1210,10 @@ team
   line-height: 26px;
 }
 
-/* 
+/*
 ---------------------------------------------
 pricing
---------------------------------------------- 
+---------------------------------------------
 */
 .pricing-item {
   background: #FFFFFF;
@@ -1308,10 +1327,10 @@ pricing
   margin-top: 50px;
 }
 
-/* 
+/*
 ---------------------------------------------
 blog
---------------------------------------------- 
+---------------------------------------------
 */
 .blog-post-thumb {
   text-align: center;
@@ -1383,10 +1402,10 @@ blog
 }
 
 
-/* 
+/*
 ---------------------------------------------
 contact
---------------------------------------------- 
+---------------------------------------------
 */
 
 #contact-us {
@@ -1436,10 +1455,10 @@ contact
   padding: 20px;
 }
 
-/* 
+/*
 ---------------------------------------------
 footer
---------------------------------------------- 
+---------------------------------------------
 */
 footer {
   background-image: linear-gradient(127deg, #a759d1 0%, #8261ee 91%);
@@ -1471,6 +1490,8 @@ footer .social li a {
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 footer .social li a:hover {
@@ -1481,7 +1502,7 @@ footer .social li a:hover {
 footer .copyright {
   text-align: center;
   border-top: 1px solid rgba(250,250,250,0.2);
-  margin-top: 30px;
+  margin-top: 0px;
   padding-top: 30px;
   padding-bottom: 30px;
   font-weight: 400;
@@ -1503,10 +1524,10 @@ footer .copyright {
   }
 }
 
-/* 
+/*
 ---------------------------------------------
 preloader
---------------------------------------------- 
+---------------------------------------------
 */
 #preloader {
   overflow: hidden;
