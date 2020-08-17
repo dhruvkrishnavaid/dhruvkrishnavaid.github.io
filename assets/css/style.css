@@ -42,6 +42,7 @@
     100% { transform: rotate(-6deg); }
 }
 
+/*************other transformations*************/
 .bheem {
   overflow: hidden;
   position: relative;
@@ -161,4 +162,13 @@
 
 .wow {
   padding-bottom: 40px;
+}
+
+.koimilgaya {
+  color: #ffffff;
+  background-image: url(../images/hacked.jpg);
+}
+
+.kutchu {
+  padding-bottom: 30px;
 }
