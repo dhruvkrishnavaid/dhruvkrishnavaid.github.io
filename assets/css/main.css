@@ -835,14 +835,15 @@ features
 .home-feature {
   padding-bottom: 0px;
   padding-top: 30px;
-  margin-top: 0px;
+  margin-top: -220px;
+  z-index: 9;
 }
 
 @media (min-width:991px) and (max-height:680px) {
   .home-feature {
     padding-bottom: 0px;
     padding-top: 0px;
-    margin-top: 0px;
+    margin-top: -150px;
   }
 }
 
