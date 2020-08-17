@@ -1,11 +1,3 @@
-
-body
-{
-  background-color:#141019;
-  background: radial-gradient(at 50% -20%, #908392, #0d060e) fixed;
-}
-
-
 #handboy
 {
    animation: swing ease-in-out 1.3s infinite alternate;
@@ -153,5 +145,17 @@ body
     font-size: 14px;
     line-height: 22px;
     margin-bottom: 40px;
+  }
+}
+
+.question {
+  text-align: center;
+  padding-top: 100px;
+}
+
+@media (max-width: 765px) {
+  .question {
+    padding-top: 50px;
+    
   }
 }
