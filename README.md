@@ -21,7 +21,6 @@ Please press the fork button on the top - right edge for details on my code of c
 
 [@dhruvkrishnavaid - Github](https://github.com/dhruvkrishnavaid/)<br>
 [Cocolandians - Youtube](https://www.youtube.com/channel/UC7JNIjhtuaFv6Z4T0zpy68g/)<br>
-[Dhruv Krishna Vaid - Patreon](https://www.patreon.com/dhruvkrishnavaid/)<br>
 [Cocolandians - Pinterest](https://in.pinterest.com/cocolandians/)<br>
 
 ## License
@@ -31,5 +30,4 @@ This project is licensed under the GNU GPL License v3.0 - see the [LICENSE.md](L
 ## Acknowledgments
 
 * [Dhruv Krishna Vaid](https://github.com/dhruvkrishnavaid/)
-* [Templatemo](https://templatemo.com/)
 * [Google](https://www.google.com/)
