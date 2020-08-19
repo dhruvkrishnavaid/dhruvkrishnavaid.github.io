@@ -1,45 +1,46 @@
-#handboy
-{
-   animation: swing ease-in-out 1.3s infinite alternate;
-    transform-origin: 98% 98%;
-    transform-box: fill-box;
-
+#handboy {
+  animation: swing ease-in-out 1.3s infinite alternate;
+  transform-origin: 98% 98%;
+  transform-box: fill-box;
 }
 
-
-#girllight
-{
-   animation: swing ease-in-out 1.3s infinite alternate;
-    transform-origin: 0% 97%;
-    transform-box: fill-box;
+#girllight {
+  animation: swing ease-in-out 1.3s infinite alternate;
+  transform-origin: 0% 97%;
+  transform-box: fill-box;
 }
 
-#hairgirl
-{
-    animation: swinghair ease-in-out 1.3s infinite alternate;
-   transform-origin: 60% 0%;
-    transform-box: fill-box;
-
+#hairgirl {
+  animation: swinghair ease-in-out 1.3s infinite alternate;
+  transform-origin: 60% 0%;
+  transform-box: fill-box;
 }
 
-#zero
-{
-  transform-origin:bottom;
-  transform-box:fill-box;
-
+#zero {
+  transform-origin: bottom;
+  transform-box: fill-box;
 }
 
 /*************swing************/
 @keyframes swing {
-    0% { transform: rotate(10deg); }
-    100% { transform: rotate(-10deg); }
-}
+  0% {
+    transform: rotate(10deg);
+  }
 
+  100% {
+    transform: rotate(-10deg);
+  }
+}
 
 /*************swing hair************/
 @keyframes swinghair {
-    0% { transform: rotate(6deg); }
-    100% { transform: rotate(-6deg); }
+  0% {
+    transform: rotate(6deg);
+  }
+
+  100% {
+    transform: rotate(-6deg);
+  }
 }
 
 /*************other transformations*************/
@@ -89,14 +90,17 @@
     transform: perspective(1px) translateY(-60%) !important;
     text-align: center;
   }
+
   .bheem .header-text h1 {
     text-align: center;
     color: #fff;
     margin-bottom: 15px;
   }
+
   .bheem .header-text h1 span {
     color: #fff;
   }
+
   .bheem .header-text p {
     text-align: center;
     color: #fff;
@@ -109,11 +113,13 @@
     top: 65% !important;
     transform: perspective(1px) translateY(-60%) !important;
   }
-   .bheem .header-text h1 {
+
+  .bheem .header-text h1 {
     font-size: 22px;
     line-height: 30px;
     margin-bottom: 15px;
   }
+
   .bheem .header-text p {
     margin-bottom: 20px;
   }
@@ -123,23 +129,28 @@
   .bheem {
     margin-bottom: 100px;
   }
+
   .bheem .header-text {
     top: 50% !important;
     transform: perspective(1px) translateY(-50%) !important;
     text-align: center;
   }
+
   .bheem .header-text .buttons {
     display: none;
   }
+
   .bheem .header-text h1 {
     font-weight: 600;
     font-size: 24px !important;
     line-height: 30px !important;
     margin-bottom: 30px !important;
   }
+
   .bheem .header-text h1 span {
     color: #fff;
   }
+
   .bheem .header-text p {
     text-align: center;
     color: #fff;
@@ -166,7 +177,7 @@
 
 .koimilgaya {
   color: #ffffff;
-  background-image: url(../images/hacked.jpg);
+  background-image: url(../images/hacklang.jpg);
 }
 
 .kutchu {
