@@ -877,13 +877,6 @@ header
   padding: 0px 0px 0px 0px;
 }
 
-@media (max-width: 991px) {
-  .imgsrc .logo {
-    border-bottom: 0px;
-    margin-bottom: 0px;
-    padding: 0px 0px 0px 0px;
-  }
-}
 /*
 ---------------------------------------------
 welcome
