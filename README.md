@@ -13,6 +13,10 @@ This is my portfolio website which I have created totally from scratch.
 
 Please press the fork button on the top - right edge for details on my code of conduct, and the process for submitting pull requests to me.
 
+## Usage
+
+You can use this website as a template for your own website! You are free to use it anywhere, but you have to make the source code publicly available.
+
 ## Authors
 
 * **Dhruv Krishna Vaid** - *Full work* - [dhruvkrishnavaid](https://github.com/dhruvkrishnavaid/)
