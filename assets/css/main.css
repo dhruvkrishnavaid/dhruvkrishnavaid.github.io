@@ -1848,6 +1848,7 @@ Scrollbar Styling
 
 ::-webkit-scrollbar-track {
    background: transparent;
+   opacity: 0;
 }
 
 ::-webkit-scrollbar-thumb {
