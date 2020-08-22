@@ -1847,11 +1847,11 @@ Scrollbar Styling
 }
 
 ::-webkit-scrollbar-track {
-   background: #8261ee;
+   background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: #F64C72;
+    background: #adadad;
 }
