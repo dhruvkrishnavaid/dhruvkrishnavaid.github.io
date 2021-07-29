@@ -457,7 +457,6 @@ const projectsHeader = {
 const contactPageData = {
   contactSection: {
     title: "Contact Me",
-    profile_image_path: "logo.svg",
     description:
       "I am available on almost every social site. If you find my profile (you probably won't be able to 😆), you can message me, I will reply within 2 days. 😆 I am not very active on social media. I can help you with Python, React, Android, Cloud and Opensource Development.",
   },
@@ -466,7 +465,6 @@ const contactPageData = {
     subtitle:
       "For individuals who want to make their career in IT related services, me and my friends write blogs. All the content is in Hinglish, so that people ",
     link: "https://uttam-jankari.blogspot.com",
-    avatar_image_path: "blogs_image.svg",
   },
   addressSection: {
     title: "Email Address",
