@@ -463,7 +463,7 @@ const contactPageData = {
   blogSection: {
     title: "Blogs",
     subtitle:
-      "For individuals who want to make their career in IT related services, me and my friends write blogs. All the content is in Hinglish, so that people ",
+      "For individuals who want to make their career in IT related services, me and my friends write blogs. All the content is in Hinglish, so that people are comfortable in reading the content.",
     link: "https://uttam-jankari.blogspot.com",
   },
   addressSection: {
