@@ -1,12 +1,13 @@
-require("dotenv").config();
+import dotenv from 'dotenv';
+import fetch from 'node-fetch';
+import fs from 'fs';
+
+dotenv.config();
 
 const openSource = {
   githubConvertedToken: process.env.TOKEN,
   githubUserName: "dhruvkrishnavaid",
 };
-
-const fetch = require("node-fetch");
-var fs = require("fs");
 
 const query_pr = {
   query: `
@@ -84,7 +85,7 @@ const query_issue = {
 const query_org = {
   query: `query{
 	user(login: "${openSource.githubUserName}") {
-	    repositoriesContributedTo(last: 100){
+	    repositoriesContributedTo(last: 100, contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]){
 	      totalCount
 	      nodes{
 	        owner{
