@@ -68,7 +68,7 @@ export default class Main extends Component {
               <Route
                 path="/"
                 exact
-                render={(props) => <Home {...props} theme={this.props.theme} />}
+                render={() => { window.location.href="/#/home" }}
               />
               <Route
                 path="/home"
@@ -92,15 +92,6 @@ export default class Main extends Component {
                   <Contact {...props} theme={this.props.theme} />
                 )}
               />
-              {/* <Route
-							path="/splash"
-							render={(props) => (
-								<Splash
-									{...props}
-									theme={this.props.theme}
-								/>
-							)}
-						/> */}
               <Route
                 path="/projects"
                 render={(props) => (
