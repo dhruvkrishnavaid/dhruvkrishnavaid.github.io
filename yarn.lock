@@ -4283,9 +4283,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"baseui@npm:^10.4.0":
-  version: 10.4.0
-  resolution: "baseui@npm:10.4.0"
+"baseui@npm:^10.5.0":
+  version: 10.5.0
+  resolution: "baseui@npm:10.5.0"
   dependencies:
     "@date-io/date-fns": ^2.6.2
     card-validator: ^6.2.0
@@ -4312,7 +4312,7 @@ __metadata:
     react: ">= 16.8.0 < 18"
     react-dom: ">= 16.8.0 < 18"
     styletron-react: ">=5.2.2 < 7"
-  checksum: 5d3f2cec9968c35d495beffda47164dffdb1addd4004eab42467faa23fa3fa86420e7bb503c8534f76d62c9e7e474b6b9b149f05acf2b421068a454bab0e927d
+  checksum: 55deaed9fb0f29d749760502df3b61b7c424a956c0d06a19979342b451080f5989e561fe5678767658e00d1abbef803e7a7f74fa951a19eb52c092949d7506d4
   languageName: node
   linkType: hard
 
@@ -6235,7 +6235,7 @@ __metadata:
     "@iconify/icons-logos": ^1.1.10
     "@iconify/react": ^3.0.1
     apollo-boost: ^0.4.9
-    baseui: ^10.4.0
+    baseui: ^10.5.0
     bootstrap: ^5.1.3
     chart.js: ^3.5.1
     dotenv: ^10.0.0
@@ -6251,7 +6251,7 @@ __metadata:
     radium: ^0.26.1
     react: ^17.0.2
     react-bootstrap: ^1.6.4
-    react-chartjs-2: ^3.0.5
+    react-chartjs-2: ^3.1.1
     react-dom: ^17.0.2
     react-helmet: ^6.1.0
     react-is: ^17.0.2
@@ -6259,7 +6259,7 @@ __metadata:
     react-router-dom: ^5.3.0
     react-scripts: 4.0.3
     react-spring: ^9.3.0
-    styled-components: ^5.3.1
+    styled-components: ^5.3.3
     styletron-engine-atomic: ^1.4.8
     styletron-react: ^6.0.1
     styletron-standard: ^3.0.5
@@ -13544,15 +13544,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-chartjs-2@npm:^3.0.5":
-  version: 3.0.5
-  resolution: "react-chartjs-2@npm:3.0.5"
+"react-chartjs-2@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "react-chartjs-2@npm:3.1.1"
   dependencies:
     lodash: ^4.17.19
   peerDependencies:
     chart.js: ^3.5.0
     react: ^16.8.0 || ^17.0.0
-  checksum: e21fad0db09caf9b9345a40766dd942fb24066a467a9c041555008aa9f619d73f7227e69abe3aba4d126f5677f789da682f023d07de9a502b97c0e55e90a657d
+  checksum: d94ff896853d332054e4304a2e0754fc14e41de6f97e93d201adbb6fb6034c4251387c3959e1b3e166c58ade1ca0166c3e23b0c3c99c3a9e1ab1c50a6fcd6996
   languageName: node
   linkType: hard
 
@@ -15731,9 +15731,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"styled-components@npm:^5.3.1":
-  version: 5.3.1
-  resolution: "styled-components@npm:5.3.1"
+"styled-components@npm:^5.3.3":
+  version: 5.3.3
+  resolution: "styled-components@npm:5.3.3"
   dependencies:
     "@babel/helper-module-imports": ^7.0.0
     "@babel/traverse": ^7.4.5
@@ -15749,7 +15749,7 @@ resolve@^2.0.0-next.3:
     react: ">= 16.8.0"
     react-dom: ">= 16.8.0"
     react-is: ">= 16.8.0"
-  checksum: 2d833d573c039f4af5c422ce33f06212dfa51a821994ec1d7a697355752b422cad6e92eeff712dbd9c0339aade8eb5bce10c30dfecb3c8e707530b6dda7dda10
+  checksum: a104341068fc39fa2c73950a34970d832dc7a511fc52b3df12f34e6746031f1f128f53b4d540bf39d9f0da043cf0d91517faf874d2c87de5e385f5c2e7620436
   languageName: node
   linkType: hard
 
