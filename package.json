@@ -2,13 +2,13 @@
   "private": true,
   "name": "dhruvkrishnavaid-portfolio",
   "homepage": "https://dhruvkrishnavaid.github.io",
-  "version": "2.0",
+  "version": "2.5",
   "scripts": {
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "test": "yarn build && yarn dlx serve -s build",
     "deploy": "yarn gh-pages -b gh-pages -d build",
-    "eject": "react-scripts eject",
-    "start": "react-scripts start"
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "@apollo/react-hooks": "^4.0.0",
@@ -22,6 +22,7 @@
     "graphql": "^15.6.1",
     "node-fetch": "^3.0.0",
     "node-sass": "^6.0.1",
+    "preact": "^10.5.15",
     "prettier-package-json": "^2.6.0",
     "radium": "^0.26.1",
     "react": "^17.0.2",
@@ -42,9 +43,11 @@
   "devDependencies": {
     "@iconify/icons-logos": "^1.1.10",
     "@iconify/react": "^3.0.1",
+    "customize-cra": "^1.0.0",
     "husky": "^7.0.2",
     "lint-staged": "^11.2.3",
-    "prettier": "2.4.1"
+    "prettier": "2.4.1",
+    "react-app-rewired": "^2.1.8"
   },
   "browserslist": {
     "production": [
