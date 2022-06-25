@@ -110,7 +110,7 @@ const skills = {
       title: "Full Stack Development",
       fileName: "FullStackImg",
       skills: [
-        "⚡ Building resposive website front end using React",
+        "⚡ Building responsive website front end using React",
         "⚡ Developing mobile applications using Flutter, React Native and solo android apps using Java",
         "⚡ Creating application backend in Node & Express",
       ],
@@ -442,9 +442,6 @@ const certifications = {
   ],
 };
 
-// Experience Page
-const experience = {};
-
 // Projects Page
 const projectsHeader = {
   title: "Projects",
@@ -488,7 +485,6 @@ export {
   competitiveSites,
   degrees,
   certifications,
-  experience,
   projectsHeader,
   contactPageData,
 };

@@ -1,8 +1,11 @@
 import React, { Component } from "react";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import { Fade } from "react-reveal";
 import "./PullRequestChart.css";
 import PullRequestData from "../../shared/opensource/pull_requests.json";
+
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 class PullRequestChart extends Component {
   render() {
