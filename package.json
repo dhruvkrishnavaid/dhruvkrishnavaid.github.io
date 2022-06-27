@@ -7,7 +7,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "fetch": "yarn node git_data_fetcher.mjs",
-    "preview": "yarn build && yarn dlx serve -s build",
+    "preview": "yarn dlx serve -s build",
     "deploy": "yarn gh-pages -b gh-pages -d build",
     "eject": "react-scripts eject"
   },
