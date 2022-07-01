@@ -34,14 +34,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@apollo/react-hooks", "npm:4.0.0"],\
-            ["@iconify/icons-logos", "npm:1.2.6"],\
+            ["@iconify/icons-logos", "npm:1.2.8"],\
             ["@iconify/react", "virtual:f3066e7a45686ddc15f58e65ad704954bf7cfdaf19e67539344ab65034320a789984b2a3ce9fd493c7e32cb7821556fbbf1a080e643e92161a16d1a6413a1549#npm:3.2.2"],\
             ["apollo-boost", "virtual:f3066e7a45686ddc15f58e65ad704954bf7cfdaf19e67539344ab65034320a789984b2a3ce9fd493c7e32cb7821556fbbf1a080e643e92161a16d1a6413a1549#npm:0.4.9"],\
             ["baseui", "virtual:f3066e7a45686ddc15f58e65ad704954bf7cfdaf19e67539344ab65034320a789984b2a3ce9fd493c7e32cb7821556fbbf1a080e643e92161a16d1a6413a1549#npm:11.1.2"],\
             ["bootstrap", "virtual:f3066e7a45686ddc15f58e65ad704954bf7cfdaf19e67539344ab65034320a789984b2a3ce9fd493c7e32cb7821556fbbf1a080e643e92161a16d1a6413a1549#npm:5.1.3"],\
             ["chart.js", "npm:3.8.0"],\
             ["dotenv", "npm:16.0.1"],\
-            ["fs", "npm:0.0.1-security"],\
             ["gh-pages", "npm:4.0.0"],\
             ["graphql", "npm:16.5.0"],\
             ["husky", "npm:8.0.1"],\
@@ -5295,10 +5294,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@iconify/icons-logos", [\
-        ["npm:1.2.6", {\
-          "packageLocation": "./.yarn/cache/@iconify-icons-logos-npm-1.2.6-ebd501c448-d69809414e.zip/node_modules/@iconify/icons-logos/",\
+        ["npm:1.2.8", {\
+          "packageLocation": "./.yarn/cache/@iconify-icons-logos-npm-1.2.8-0734ad53b8-35433bb7f0.zip/node_modules/@iconify/icons-logos/",\
           "packageDependencies": [\
-            ["@iconify/icons-logos", "npm:1.2.6"],\
+            ["@iconify/icons-logos", "npm:1.2.8"],\
             ["@iconify/types", "npm:1.1.0"]\
           ],\
           "linkType": "HARD"\
@@ -10961,14 +10960,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["dhruvkrishnavaid-portfolio", "workspace:."],\
             ["@apollo/react-hooks", "npm:4.0.0"],\
-            ["@iconify/icons-logos", "npm:1.2.6"],\
+            ["@iconify/icons-logos", "npm:1.2.8"],\
             ["@iconify/react", "virtual:f3066e7a45686ddc15f58e65ad704954bf7cfdaf19e67539344ab65034320a789984b2a3ce9fd493c7e32cb7821556fbbf1a080e643e92161a16d1a6413a1549#npm:3.2.2"],\
             ["apollo-boost", "virtual:f3066e7a45686ddc15f58e65ad704954bf7cfdaf19e67539344ab65034320a789984b2a3ce9fd493c7e32cb7821556fbbf1a080e643e92161a16d1a6413a1549#npm:0.4.9"],\
             ["baseui", "virtual:f3066e7a45686ddc15f58e65ad704954bf7cfdaf19e67539344ab65034320a789984b2a3ce9fd493c7e32cb7821556fbbf1a080e643e92161a16d1a6413a1549#npm:11.1.2"],\
             ["bootstrap", "virtual:f3066e7a45686ddc15f58e65ad704954bf7cfdaf19e67539344ab65034320a789984b2a3ce9fd493c7e32cb7821556fbbf1a080e643e92161a16d1a6413a1549#npm:5.1.3"],\
             ["chart.js", "npm:3.8.0"],\
             ["dotenv", "npm:16.0.1"],\
-            ["fs", "npm:0.0.1-security"],\
             ["gh-pages", "npm:4.0.0"],\
             ["graphql", "npm:16.5.0"],\
             ["husky", "npm:8.0.1"],\
@@ -12568,15 +12566,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/fresh-npm-0.5.2-ad2bb4c0a2-13ea8b08f9.zip/node_modules/fresh/",\
           "packageDependencies": [\
             ["fresh", "npm:0.5.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["fs", [\
-        ["npm:0.0.1-security", {\
-          "packageLocation": "./.yarn/cache/fs-npm-0.0.1-security-5060b47e87-53c6230e1f.zip/node_modules/fs/",\
-          "packageDependencies": [\
-            ["fs", "npm:0.0.1-security"]\
           ],\
           "linkType": "HARD"\
         }]\

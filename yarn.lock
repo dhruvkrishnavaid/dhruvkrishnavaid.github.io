@@ -2907,12 +2907,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@iconify/icons-logos@npm:^1.2.6":
-  version: 1.2.6
-  resolution: "@iconify/icons-logos@npm:1.2.6"
+"@iconify/icons-logos@npm:^1.2.8":
+  version: 1.2.8
+  resolution: "@iconify/icons-logos@npm:1.2.8"
   dependencies:
-    "@iconify/types": ^1.0.12
-  checksum: d69809414e3101274daddf5ae192e7d8ec686e94db7866c9c7e06e38a79e848dce3034c57734d0d5b23ab1ccd04073b6916cd6ab37af7e654029ffaca4b13d88
+    "@iconify/types": "*"
+  checksum: 35433bb7f0b70ad49ec648fde1788e8aa0856b613f19e29845611c31d1eabfb4f29496243118e969364169fdfea65995749cf9668c566cca8d9602378085b810
   languageName: node
   linkType: hard
 
@@ -2925,7 +2925,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@iconify/types@npm:^1.0.12":
+"@iconify/types@npm:*":
   version: 1.1.0
   resolution: "@iconify/types@npm:1.1.0"
   checksum: beffcdbf14e879ff74e79ac29ea0f4f4874f9df632f1994d97395b3f05cbeebaf10f1abc73cf850dc7444924cd57ed92e0e2ca55bacfe3374eff7542d489fbd0
@@ -7235,14 +7235,13 @@ __metadata:
   resolution: "dhruvkrishnavaid-portfolio@workspace:."
   dependencies:
     "@apollo/react-hooks": ^4.0.0
-    "@iconify/icons-logos": ^1.2.6
+    "@iconify/icons-logos": ^1.2.8
     "@iconify/react": ^3.2.2
     apollo-boost: ^0.4.9
     baseui: ^11.1.2
     bootstrap: ^5.1.3
     chart.js: ^3.8.0
     dotenv: ^16.0.1
-    fs: 0.0.1-security
     gh-pages: ^4.0.0
     graphql: ^16.5.0
     husky: ^8.0.1
@@ -7258,7 +7257,7 @@ __metadata:
     react-helmet: ^6.1.0
     react-is: ^18.2.0
     react-reveal: ^1.2.2
-    react-router-dom: classic
+    react-router-dom: ^5.3.3
     react-scripts: 5.0.1
     react-spring: ^9.4.5
     styled-components: ^5.3.5
@@ -8589,13 +8588,6 @@ __metadata:
   version: 1.0.0
   resolution: "fs.realpath@npm:1.0.0"
   checksum: 99ddea01a7e75aa276c250a04eedeffe5662bce66c65c07164ad6264f9de18fb21be9433ead460e54cff20e31721c811f4fb5d70591799df5f85dce6d6746fd0
-  languageName: node
-  linkType: hard
-
-"fs@npm:0.0.1-security":
-  version: 0.0.1-security
-  resolution: "fs@npm:0.0.1-security"
-  checksum: 53c6230e1faae9fa32c1df82c16a84b51b1243d20f3da2b64bd110bb472b73b9185169b703e008356e3cdc92d155088b617d9d39a63b5227a30b3621baad7f5d
   languageName: node
   linkType: hard
 
@@ -13451,7 +13443,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router-dom@npm:classic":
+"react-router-dom@npm:^5.3.3":
   version: 5.3.3
   resolution: "react-router-dom@npm:5.3.3"
   dependencies:
