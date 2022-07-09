@@ -2907,12 +2907,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@iconify/icons-logos@npm:^1.2.8":
-  version: 1.2.8
-  resolution: "@iconify/icons-logos@npm:1.2.8"
+"@iconify/icons-logos@npm:^1.2.9":
+  version: 1.2.9
+  resolution: "@iconify/icons-logos@npm:1.2.9"
   dependencies:
     "@iconify/types": "*"
-  checksum: 35433bb7f0b70ad49ec648fde1788e8aa0856b613f19e29845611c31d1eabfb4f29496243118e969364169fdfea65995749cf9668c566cca8d9602378085b810
+  checksum: 38da55e35268c6791c2e05ad3f4187a9956f43434628f81585064b804bbf33206d54275779eddc47771f1d028bc0741619ffd5c5c5159cc4666679f7a159820c
   languageName: node
   linkType: hard
 
@@ -5481,9 +5481,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"baseui@npm:^11.1.2":
-  version: 11.1.2
-  resolution: "baseui@npm:11.1.2"
+"baseui@npm:^11.2.1":
+  version: 11.2.1
+  resolution: "baseui@npm:11.2.1"
   dependencies:
     "@date-io/date-fns": ^2.6.2
     card-validator: ^6.2.0
@@ -5512,7 +5512,7 @@ __metadata:
     react: ">= 16.8.0 < 19"
     react-dom: ">= 16.8.0 < 19"
     styletron-react: ">=5.2.2 < 7"
-  checksum: d5498519df146a13aeb70d350aea11c6e7a18e1667de86a8cceca453639a5d17b4aad508c9db110430553d3e38b793eefc19ae7557aa5c0d5ac965e78fd14ba2
+  checksum: a63589e0f3a37390dee33c4c3bfef125c65ac4ad1fce821192b70f06840008b5e0ef0692ea84cecc70532c6d8d2cdf1a0150f85b9e2d8bc597a9bc4364ee20e2
   languageName: node
   linkType: hard
 
@@ -6656,6 +6656,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"csstype@npm:^3.0.0":
+  version: 3.1.0
+  resolution: "csstype@npm:3.1.0"
+  checksum: 644e986cefab86525f0b674a06889cfdbb1f117e5b7d1ce0fc55b0423ecc58807a1ea42ecc75c4f18999d14fc42d1d255f84662a45003a52bb5840e977eb2ffd
+  languageName: node
+  linkType: hard
+
 "csstype@npm:^3.0.2":
   version: 3.0.8
   resolution: "csstype@npm:3.0.8"
@@ -7235,10 +7242,10 @@ __metadata:
   resolution: "dhruvkrishnavaid-portfolio@workspace:."
   dependencies:
     "@apollo/react-hooks": ^4.0.0
-    "@iconify/icons-logos": ^1.2.8
+    "@iconify/icons-logos": ^1.2.9
     "@iconify/react": ^3.2.2
     apollo-boost: ^0.4.9
-    baseui: ^11.1.2
+    baseui: ^11.2.1
     bootstrap: ^5.1.3
     chart.js: ^3.8.0
     dotenv: ^16.0.1
@@ -7261,9 +7268,9 @@ __metadata:
     react-scripts: 5.0.1
     react-spring: ^9.4.5
     styled-components: ^5.3.5
-    styletron-engine-atomic: ^1.4.8
-    styletron-react: ^6.0.2
-    styletron-standard: ^3.0.5
+    styletron-engine-atomic: ^1.5.0-beta.2
+    styletron-react: ^6.1.0-beta.2
+    styletron-standard: ^3.1.0-beta.2
   languageName: unknown
   linkType: soft
 
@@ -15009,35 +15016,36 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"styletron-engine-atomic@npm:^1.4.8":
-  version: 1.4.8
-  resolution: "styletron-engine-atomic@npm:1.4.8"
+"styletron-engine-atomic@npm:^1.5.0-beta.2":
+  version: 1.5.0-beta.2
+  resolution: "styletron-engine-atomic@npm:1.5.0-beta.2"
   dependencies:
     inline-style-prefixer: ^5.1.0
-    styletron-standard: ^3.0.5
-  checksum: cd5eebf3a7ca65aea1511e6e1dcc5d6295ee00763fa5f7ccb01e2a256061259800d61cfbbd276514acfea81ae692d48ccf46741f16586c09904c090ec6faadca
+    styletron-standard: ^3.1.0-beta.2
+  checksum: 083acba7a183c05bb38653c6c28a04400540915dac29b362cbb94add20a779fcc3ce3de870c2196bfd632bee9066f19c02b5eff2300e2720e9c142587689091b
   languageName: node
   linkType: hard
 
-"styletron-react@npm:^6.0.2":
-  version: 6.0.2
-  resolution: "styletron-react@npm:6.0.2"
+"styletron-react@npm:^6.1.0-beta.2":
+  version: 6.1.0-beta.2
+  resolution: "styletron-react@npm:6.1.0-beta.2"
   dependencies:
     prop-types: ^15.6.0
-    styletron-standard: ^3.0.5
+    styletron-standard: ^3.1.0-beta.2
   peerDependencies:
     react: ">=16.8.0"
-  checksum: 75f745bcc3a06ab60c2dd32499be57d7c0293d49ca5fc07e6bfd1fffbe3e9c2cabafd58b8590332e79a1482b00fb2d3dceadf10c3499b16cb8a593f9082dbc5e
+  checksum: 2bcd6800febb139f0990ee38062aceb5211c4105943a8b2f5b27c86270d7732a3233ff822698921a3c7a0eb70d3f2046eb9ccbd64c7b70b6b07fa49db251db3b
   languageName: node
   linkType: hard
 
-"styletron-standard@npm:^3.0.5":
-  version: 3.0.5
-  resolution: "styletron-standard@npm:3.0.5"
+"styletron-standard@npm:^3.1.0-beta.2":
+  version: 3.1.0-beta.2
+  resolution: "styletron-standard@npm:3.1.0-beta.2"
   dependencies:
     "@rtsao/csstype": 2.6.5-forked.0
+    csstype: ^3.0.0
     inline-style-prefixer: ^5.1.0
-  checksum: af7ace40780b34e3bb3cdc106d7d1b5a03a2a6de1df9983ade521a8c20e6ed7d834c22d2fbe93bbd3271cc454dad9853dbbcbc146133fe5ec5672f6e7c23db84
+  checksum: 01ba4043affe819bd1644b95fa7724b805906cc0d062b1979f2b8ac1f5782c3d4c244b760017c188c0dd63db3712934e155d7fe3f7ccbd81f14c8963afd46aa0
   languageName: node
   linkType: hard
 
