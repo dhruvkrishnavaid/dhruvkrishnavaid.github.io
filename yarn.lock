@@ -1110,7 +1110,7 @@
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
 
-"@iconify/icons-logos@^1.2.9":
+"@iconify/icons-logos@^1.2.11":
   version "1.2.11"
   resolved "https://registry.yarnpkg.com/@iconify/icons-logos/-/icons-logos-1.2.11.tgz#0e7ccd6fb3b9a50655030f7cdeae44cbffd1969f"
   dependencies:

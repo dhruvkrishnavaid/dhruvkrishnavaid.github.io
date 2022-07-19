@@ -39,7 +39,7 @@
     "styletron-standard": "^3.1.0-beta.2"
   },
   "devDependencies": {
-    "@iconify/icons-logos": "^1.2.9",
+    "@iconify/icons-logos": "^1.2.11",
     "@iconify/react": "^3.2.2",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
