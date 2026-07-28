@@ -1,7 +1,11 @@
 {
-  "search.exclude": {
-    "**/.yarn": true,
-    "**/.pnp.*": true
+  "files.watcherExclude": {
+    "**/routeTree.gen.ts": true
   },
-  "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
+  "search.exclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "files.readonlyInclude": {
+    "**/routeTree.gen.ts": true
+  }
 }
