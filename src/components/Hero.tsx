@@ -150,17 +150,12 @@ export default function Hero() {
       />
 
       {/* Layer 3: Hero text */}
-      <div className="pointer-events-none absolute inset-x-0 top-20 z-20 flex justify-center sm:top-28 md:top-32">
-        <h1
-          className="xs:text-[5.5rem] text-center text-[4.5rem] leading-[0.9] text-white uppercase sm:text-[10rem] md:text-[13rem] lg:text-[16rem]"
-          style={{ fontFamily: "'Instrument Serif', serif" }}
-        >
-          <img
-            src="/images/hero-banner.png"
-            alt="Dhruv Krishna Vaid"
-            className="mx-auto h-auto w-full sm:w-[80%] md:w-[70%] lg:w-[70%]"
-          />
-        </h1>
+      <div className="pointer-events-none absolute inset-x-0 top-20 z-20 flex justify-center sm:top-20 xl:top-24">
+        <img
+          src="/images/hero-banner.png"
+          alt="Dhruv Krishna Vaid"
+          className="mx-auto h-auto w-full sm:w-[80%] md:w-[70%] lg:w-[70%]"
+        />
       </div>
 
       {/* Layer 4: Overlay image */}
