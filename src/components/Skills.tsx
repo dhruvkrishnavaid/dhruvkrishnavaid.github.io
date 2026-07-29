@@ -35,24 +35,40 @@ export default function Skills() {
           </div>
         </ScrollReveal>
 
-        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 sm:grid-cols-2">
+        <div className="mt-14 grid gap-4 sm:grid-cols-2">
           {SERVICES.map((s, i) => (
-            <ScrollReveal
-              key={s.title}
-              delay={(i % 2) * 0.1}
-              yOffset={16}
-              className="flex min-h-55 flex-col gap-4 bg-black p-8 sm:p-10"
-            >
-              <div className="flex items-center text-xs tracking-[0.2em] text-white/40 uppercase tabular-nums">
-                <span>0{i + 1}</span>
-              </div>
-              <h3
-                className="text-2xl leading-tight text-white sm:text-3xl"
-                style={{ fontFamily: "'Instrument Serif', serif" }}
+            <ScrollReveal key={s.title} delay={(i % 2) * 0.1} yOffset={16}>
+              <div
+                className="group relative flex h-full min-h-55 flex-col gap-4 overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-300 hover:border-white/30 hover:bg-white/10 hover:shadow-[0_0_40px_rgba(255,255,255,0.12)] sm:p-10"
+                onMouseMove={(e) => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  const x = e.clientX - rect.left;
+                  const y = e.clientY - rect.top;
+                  e.currentTarget.style.setProperty("--mouse-x", `${x}px`);
+                  e.currentTarget.style.setProperty("--mouse-y", `${y}px`);
+                }}
               >
-                {s.title}
-              </h3>
-              <p className="text-sm leading-relaxed text-white/60">{s.desc}</p>
+                <div className="flex items-center text-xs tracking-[0.2em] text-white/40 uppercase tabular-nums">
+                  <span>0{i + 1}</span>
+                </div>
+                <h3
+                  className="text-2xl leading-tight text-white sm:text-3xl"
+                  style={{ fontFamily: "'Instrument Serif', serif" }}
+                >
+                  {s.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-white/60">
+                  {s.desc}
+                </p>
+                {/* Mouse-following radial glow on card hover */}
+                <div
+                  className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  style={{
+                    background:
+                      "radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.12), transparent 80%)",
+                  }}
+                />
+              </div>
             </ScrollReveal>
           ))}
         </div>

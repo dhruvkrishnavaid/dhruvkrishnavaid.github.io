@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import type { Variants } from "motion/react";
 
 const NAV_ITEMS = [
+  "HOME",
   "ABOUT",
   "PROJECTS",
   "SKILLS",
@@ -107,9 +108,11 @@ export default function MobileMenu({ onClose }: MobileMenuProps) {
           whileTap={{ scale: 0.95 }}
           href="mailto:dhruvkrishnavaid@gmail.com"
           onClick={onClose}
-          className="liquid-glass mt-6 inline-flex cursor-pointer items-center gap-2 rounded-full px-6 py-3"
+          className="group relative mt-6 inline-flex cursor-pointer items-center gap-2 overflow-hidden rounded-full border border-white/10 bg-white/5 px-6 py-3 backdrop-blur-md transition-all duration-300 hover:border-white/30 hover:bg-white/10 hover:shadow-[0_0_25px_rgba(255,255,255,0.12)]"
         >
-          <span className="text-base font-medium text-white">GET IN TOUCH</span>
+          <span className="relative z-10 text-base font-medium text-white">
+            GET IN TOUCH
+          </span>
         </motion.a>
       </motion.div>
     </motion.div>

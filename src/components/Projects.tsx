@@ -64,7 +64,16 @@ export default function Projects() {
         <div className="mt-14 grid gap-4 md:grid-cols-3">
           {PROJECTS.map((p, i) => (
             <ScrollReveal key={p.title} delay={(i % 3) * 0.1} yOffset={20}>
-              <article className="group relative h-full overflow-hidden rounded-2xl border border-white/10 bg-white/2 p-6 transition-colors hover:bg-white/4 sm:p-8">
+              <article
+                className="group relative h-full overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-white/30 hover:bg-white/10 hover:shadow-[0_0_40px_rgba(255,255,255,0.12)] sm:p-8"
+                onMouseMove={(e) => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  const x = e.clientX - rect.left;
+                  const y = e.clientY - rect.top;
+                  e.currentTarget.style.setProperty("--mouse-x", `${x}px`);
+                  e.currentTarget.style.setProperty("--mouse-y", `${y}px`);
+                }}
+              >
                 <div className="flex items-center justify-between text-xs tracking-[0.2em] text-white/50 uppercase">
                   <span>{p.tag}</span>
                   <span className="tabular-nums">
@@ -83,7 +92,14 @@ export default function Projects() {
                 <div className="mt-8 border-t border-white/10 pt-6 text-xs tracking-[0.2em] text-white/40 uppercase">
                   {p.meta}
                 </div>
-                <div className="pointer-events-none absolute -right-24 -bottom-24 h-48 w-48 rounded-full bg-white/5 opacity-0 blur-3xl transition-opacity group-hover:opacity-100" />
+                {/* Mouse-following radial glow on card hover */}
+                <div
+                  className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  style={{
+                    background:
+                      "radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.1), transparent 90%)",
+                  }}
+                />
               </article>
             </ScrollReveal>
           ))}

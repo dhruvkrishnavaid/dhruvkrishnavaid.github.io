@@ -106,7 +106,7 @@ export default function Hero() {
 
   return (
     <section
-      id="hero"
+      id="home"
       ref={sectionRef}
       className="font-helvetica-neue relative h-screen w-full overflow-hidden bg-black"
     >

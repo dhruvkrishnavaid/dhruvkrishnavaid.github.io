@@ -56,9 +56,24 @@ export default function Footer() {
             <div className="mt-8">
               <a
                 href="mailto:dhruvkrishnavaid@gmail.com"
-                className="liquid-glass inline-flex cursor-pointer items-center gap-2 rounded-full px-5 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
+                className="group relative inline-flex cursor-pointer items-center gap-2 overflow-hidden rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-medium text-white backdrop-blur-md transition-all duration-300 hover:border-white/30 hover:bg-white/10 hover:shadow-[0_0_25px_rgba(255,255,255,0.12)]"
+                onMouseMove={(e) => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  const x = e.clientX - rect.left;
+                  const y = e.clientY - rect.top;
+                  e.currentTarget.style.setProperty("--mouse-x", `${x}px`);
+                  e.currentTarget.style.setProperty("--mouse-y", `${y}px`);
+                }}
               >
-                Get in touch
+                <span className="relative z-10">Get in touch</span>
+                {/* Mouse-following radial glow on footer CTA hover */}
+                <div
+                  className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  style={{
+                    background:
+                      "radial-gradient(200px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.15), transparent 80%)",
+                  }}
+                />
               </a>
             </div>
           </ScrollReveal>

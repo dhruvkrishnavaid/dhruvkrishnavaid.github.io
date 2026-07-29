@@ -1,4 +1,5 @@
 const NAV_ITEMS = [
+  "Home",
   "About",
   "Projects",
   "Skills",
@@ -29,35 +30,68 @@ export default function Navbar({ onOpenMenu }: NavbarProps) {
 
         {/* Center pill nav */}
         <div className="pointer-events-auto absolute top-4 left-1/2 hidden -translate-x-1/2 md:flex">
-          <div className="liquid-glass flex items-center gap-1 rounded-full px-2 py-2">
+          <div
+            className="group relative flex items-center gap-1 overflow-hidden rounded-full border border-white/10 bg-white/5 px-2 py-2 backdrop-blur-md transition-all duration-300 hover:border-white/30 hover:bg-white/10 hover:shadow-[0_0_25px_rgba(255,255,255,0.12)]"
+            onMouseMove={(e) => {
+              const rect = e.currentTarget.getBoundingClientRect();
+              const x = e.clientX - rect.left;
+              const y = e.clientY - rect.top;
+              e.currentTarget.style.setProperty("--mouse-x", `${x}px`);
+              e.currentTarget.style.setProperty("--mouse-y", `${y}px`);
+            }}
+          >
             {NAV_ITEMS.map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="cursor-pointer rounded-full px-4 py-1.5 text-sm font-medium text-white/70 transition-colors hover:text-white"
+                className="relative z-10 cursor-pointer rounded-full px-4 py-1.5 text-sm font-medium text-white/70 transition-all duration-300 hover:text-white"
               >
                 {item}
               </a>
             ))}
+            {/* Mouse-following radial glow on nav pill hover */}
+            <div
+              className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              style={{
+                background:
+                  "radial-gradient(200px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.15), transparent 80%)",
+              }}
+            />
           </div>
         </div>
 
         {/* Desktop CTA */}
         <a
           href="mailto:dhruvkrishnavaid@gmail.com"
-          className="liquid-glass pointer-events-auto hidden cursor-pointer items-center gap-2 rounded-full px-4 py-2 md:inline-flex"
+          className="group pointer-events-auto relative hidden cursor-pointer items-center gap-2 overflow-hidden rounded-full border border-white/10 bg-white/5 px-5 py-2 backdrop-blur-md transition-all duration-300 hover:border-white/30 hover:bg-white/10 hover:shadow-[0_0_25px_rgba(255,255,255,0.12)] md:inline-flex"
+          onMouseMove={(e) => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            e.currentTarget.style.setProperty("--mouse-x", `${x}px`);
+            e.currentTarget.style.setProperty("--mouse-y", `${y}px`);
+          }}
         >
-          <span className="text-sm font-medium text-white">Get in touch</span>
+          <span className="relative z-10 text-sm font-medium text-white">
+            Get in touch
+          </span>
+          <div
+            className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            style={{
+              background:
+                "radial-gradient(150px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.15), transparent 80%)",
+            }}
+          />
         </a>
 
         {/* Mobile hamburger */}
         <button
           onClick={onOpenMenu}
           aria-label="Open menu"
-          className="liquid-glass pointer-events-auto flex h-11 w-11 cursor-pointer flex-col items-center justify-center gap-1.5 rounded-full md:hidden"
+          className="group pointer-events-auto relative flex h-11 w-11 cursor-pointer flex-col items-center justify-center gap-1.5 overflow-hidden rounded-full border border-white/10 bg-white/5 backdrop-blur-md transition-all duration-300 hover:border-white/30 hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,255,255,0.12)] md:hidden"
         >
-          <span className="h-[1.5px] w-5 bg-white" />
-          <span className="h-[1.5px] w-3.5 bg-white" />
+          <span className="relative z-10 h-[1.5px] w-5 bg-white" />
+          <span className="relative z-10 h-[1.5px] w-3.5 bg-white" />
         </button>
       </div>
     </nav>
