@@ -1,13 +1,8 @@
+import { STATS } from "#/data/portfolioData";
+
 import ScrollReveal from "./ScrollReveal";
 import SectionLabel from "./SectionLabel";
 import SerifHeading from "./SerifHeading";
-
-const STATS = [
-  { k: "5+ yrs", v: "Engineering experience" },
-  { k: "6+", v: "Featured projects" },
-  { k: "AI/ML", v: "Gemini · Tanstack AI" },
-  { k: "Noida", v: "Based in India" },
-] as const;
 
 export default function About() {
   return (

@@ -1,14 +1,9 @@
 import { motion } from "motion/react";
 import type { Variants } from "motion/react";
 
-const NAV_ITEMS = [
-  "HOME",
-  "ABOUT",
-  "PROJECTS",
-  "SKILLS",
-  "EXPERIENCE",
-  "CONTACT",
-] as const;
+import { NAV_ITEMS } from "#/data/portfolioData";
+
+import GlassButton from "./common/GlassButton";
 
 interface MobileMenuProps {
   onClose: () => void;
@@ -19,31 +14,32 @@ const containerVariants: Variants = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.07,
-      delayChildren: 0.15,
+      staggerChildren: 0.08,
+      delayChildren: 0.1,
     },
   },
   exit: {
     opacity: 0,
     transition: {
-      staggerChildren: 0.04,
+      staggerChildren: 0.05,
       staggerDirection: -1,
     },
   },
 };
 
 const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 25, filter: "blur(6px)" },
+  hidden: { opacity: 0, y: 20 },
   show: {
     opacity: 1,
     y: 0,
-    filter: "blur(0px)",
-    transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
+    transition: {
+      duration: 0.4,
+      ease: [0.22, 1, 0.36, 1],
+    },
   },
   exit: {
     opacity: 0,
-    y: 15,
-    filter: "blur(4px)",
+    y: 10,
     transition: { duration: 0.2 },
   },
 };
@@ -51,34 +47,42 @@ const itemVariants: Variants = {
 export default function MobileMenu({ onClose }: MobileMenuProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: "-100%" }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: "-100%" }}
-      transition={{ duration: 0.45, ease: [0.77, 0, 0.18, 1] }}
-      className="fixed inset-0 z-55 flex flex-col justify-between bg-black/95 px-6 py-8 backdrop-blur-xl md:hidden"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+      className="fixed inset-0 z-50 flex flex-col bg-black/95 px-6 py-6 backdrop-blur-xl sm:px-10"
     >
-      <div className="flex justify-end">
-        <motion.button
+      <div className="flex items-center justify-between">
+        <a href="#" onClick={onClose} aria-label="Measured home">
+          <img
+            src="/images/favicon-transparent.png"
+            alt="Logo"
+            className="h-10 w-auto"
+          />
+        </a>
+
+        <button
           onClick={onClose}
           aria-label="Close menu"
-          initial={{ opacity: 0, scale: 0.8, rotate: -90 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          exit={{ opacity: 0, scale: 0.8, rotate: 90 }}
-          transition={{ duration: 0.3 }}
-          whileTap={{ scale: 0.9 }}
-          className="liquid-glass flex h-11 w-11 cursor-pointer items-center justify-center rounded-full"
+          className="group relative flex h-11 w-11 cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 backdrop-blur-md transition-all duration-300 hover:border-white/30 hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,255,255,0.12)]"
         >
-          <span className="relative block h-5 w-5">
-            <span
-              className="absolute top-1/2 left-0 h-[1.5px] w-5 bg-white"
-              style={{ transform: "translateY(-50%) rotate(45deg)" }}
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            className="text-white"
+          >
+            <path
+              d="M18 6L6 18M6 6l12 12"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
-            <span
-              className="absolute top-1/2 left-0 h-[1.5px] w-5 bg-white"
-              style={{ transform: "translateY(-50%) rotate(-45deg)" }}
-            />
-          </span>
-        </motion.button>
+          </svg>
+        </button>
       </div>
 
       <motion.div
@@ -90,30 +94,27 @@ export default function MobileMenu({ onClose }: MobileMenuProps) {
       >
         {NAV_ITEMS.map((item) => (
           <motion.a
-            key={item}
+            key={item.label}
             variants={itemVariants}
             whileHover={{ scale: 1.05, x: 4 }}
             whileTap={{ scale: 0.95 }}
-            href={`#${item.toLowerCase()}`}
+            href={item.href}
             onClick={onClose}
-            className="cursor-pointer text-3xl font-medium text-white/90 transition-colors hover:text-white sm:text-4xl"
+            className="cursor-pointer text-3xl font-medium text-white/90 uppercase transition-colors hover:text-white sm:text-4xl"
           >
-            {item}
+            {item.label}
           </motion.a>
         ))}
 
-        <motion.a
-          variants={itemVariants}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          href="mailto:dhruvkrishnavaid@gmail.com"
-          onClick={onClose}
-          className="group relative mt-6 inline-flex cursor-pointer items-center gap-2 overflow-hidden rounded-full border border-white/10 bg-white/5 px-6 py-3 backdrop-blur-md transition-all duration-300 hover:border-white/30 hover:bg-white/10 hover:shadow-[0_0_25px_rgba(255,255,255,0.12)]"
-        >
-          <span className="relative z-10 text-base font-medium text-white">
+        <motion.div variants={itemVariants}>
+          <GlassButton
+            href="mailto:dhruvkrishnavaid@gmail.com"
+            onClick={onClose}
+            className="mt-6 px-6 py-3 text-base font-medium text-white uppercase"
+          >
             GET IN TOUCH
-          </span>
-        </motion.a>
+          </GlassButton>
+        </motion.div>
       </motion.div>
     </motion.div>
   );

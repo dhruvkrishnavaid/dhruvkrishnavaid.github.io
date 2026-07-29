@@ -1,17 +1,15 @@
-const NAV_ITEMS = [
-  "Home",
-  "About",
-  "Projects",
-  "Skills",
-  "Experience",
-  "Contact",
-] as const;
+import { NAV_ITEMS } from "#/data/portfolioData";
+import { useMouseSpotlight } from "#/hooks/useMouseSpotlight";
+
+import GlassButton from "./common/GlassButton";
 
 interface NavbarProps {
   onOpenMenu: () => void;
 }
 
 export default function Navbar({ onOpenMenu }: NavbarProps) {
+  const { handleMouseMove } = useMouseSpotlight();
+
   return (
     <nav className="pointer-events-none fixed top-0 right-0 left-0 z-50">
       <div className="flex items-center justify-between px-5 pt-5 sm:px-8">
@@ -32,21 +30,15 @@ export default function Navbar({ onOpenMenu }: NavbarProps) {
         <div className="pointer-events-auto absolute top-4 left-1/2 hidden -translate-x-1/2 md:flex">
           <div
             className="group relative flex items-center gap-1 overflow-hidden rounded-full border border-white/10 bg-white/5 px-2 py-2 backdrop-blur-md transition-all duration-300 hover:border-white/30 hover:bg-white/10 hover:shadow-[0_0_25px_rgba(255,255,255,0.12)]"
-            onMouseMove={(e) => {
-              const rect = e.currentTarget.getBoundingClientRect();
-              const x = e.clientX - rect.left;
-              const y = e.clientY - rect.top;
-              e.currentTarget.style.setProperty("--mouse-x", `${x}px`);
-              e.currentTarget.style.setProperty("--mouse-y", `${y}px`);
-            }}
+            onMouseMove={handleMouseMove}
           >
             {NAV_ITEMS.map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.label}
+                href={item.href}
                 className="relative z-10 cursor-pointer rounded-full px-4 py-1.5 text-sm font-medium text-white/70 transition-all duration-300 hover:text-white"
               >
-                {item}
+                {item.label}
               </a>
             ))}
             {/* Mouse-following radial glow on nav pill hover */}
@@ -61,28 +53,12 @@ export default function Navbar({ onOpenMenu }: NavbarProps) {
         </div>
 
         {/* Desktop CTA */}
-        <a
+        <GlassButton
           href="mailto:dhruvkrishnavaid@gmail.com"
-          className="group pointer-events-auto relative hidden cursor-pointer items-center gap-2 overflow-hidden rounded-full border border-white/10 bg-white/5 px-5 py-2 backdrop-blur-md transition-all duration-300 hover:border-white/30 hover:bg-white/10 hover:shadow-[0_0_25px_rgba(255,255,255,0.12)] md:inline-flex"
-          onMouseMove={(e) => {
-            const rect = e.currentTarget.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            e.currentTarget.style.setProperty("--mouse-x", `${x}px`);
-            e.currentTarget.style.setProperty("--mouse-y", `${y}px`);
-          }}
+          className="pointer-events-auto hidden px-5 py-2 text-sm font-medium text-white md:inline-flex"
         >
-          <span className="relative z-10 text-sm font-medium text-white">
-            Get in touch
-          </span>
-          <div
-            className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            style={{
-              background:
-                "radial-gradient(150px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.15), transparent 80%)",
-            }}
-          />
-        </a>
+          Get in touch
+        </GlassButton>
 
         {/* Mobile hamburger */}
         <button
