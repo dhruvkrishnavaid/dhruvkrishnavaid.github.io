@@ -6,6 +6,7 @@ import { NAV_ITEMS } from "#/data/portfolioData";
 import GlassButton from "./common/GlassButton";
 
 interface MobileMenuProps {
+  onNavigate: (target: string) => void;
   onClose: () => void;
 }
 
@@ -44,24 +45,30 @@ const itemVariants: Variants = {
   },
 };
 
-export default function MobileMenu({ onClose }: MobileMenuProps) {
+export default function MobileMenu({ onNavigate, onClose }: MobileMenuProps) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      data-lenis-prevent
       className="fixed inset-0 z-50 flex flex-col bg-black/95 px-6 py-6 backdrop-blur-xl sm:px-10"
     >
       <div className="flex items-center justify-between">
-        <a href="#" onClick={onClose} aria-label="Measured home">
+        <button
+          type="button"
+          onClick={() => {
+            onNavigate("#home");
+            onClose();
+          }}
+          aria-label="Measured home"
+        >
           <img
             src="/images/favicon-transparent.png"
             alt="Logo"
             className="h-10 w-auto"
           />
-        </a>
+        </button>
 
         <button
           onClick={onClose}
@@ -94,17 +101,20 @@ export default function MobileMenu({ onClose }: MobileMenuProps) {
         className="my-auto flex flex-col items-center justify-center gap-6"
       >
         {NAV_ITEMS.map((item) => (
-          <motion.a
+          <motion.button
             key={item.label}
             variants={itemVariants}
             whileHover={{ scale: 1.05, x: 4 }}
             whileTap={{ scale: 0.95 }}
-            href={item.href}
-            onClick={onClose}
+            type="button"
+            onClick={() => {
+              onNavigate(item.href);
+              onClose();
+            }}
             className="cursor-pointer text-3xl font-medium text-white/90 uppercase transition-colors hover:text-white sm:text-4xl"
           >
             {item.label}
-          </motion.a>
+          </motion.button>
         ))}
 
         <motion.div variants={itemVariants}>

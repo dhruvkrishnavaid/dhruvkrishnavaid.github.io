@@ -14,6 +14,7 @@ import MobileMenu from "@/components/MobileMenu";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -22,9 +23,21 @@ export const Route = createFileRoute("/")({
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const lenisRef = useRef<LenisRef>(null);
+  const isMobile = useIsMobile();
 
   const scrollToSection = (target: string) => {
-    lenisRef.current?.lenis?.scrollTo(target);
+    const element = document.querySelector(target) as HTMLElement | null;
+
+    if (!element) {
+      return;
+    }
+
+    if (isMobile) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      lenisRef.current?.lenis?.scrollTo(element, { offset: 32 });
+    }
+
     setMenuOpen(false);
   };
 
@@ -40,6 +53,10 @@ function Index() {
   }, [menuOpen]);
 
   useEffect(() => {
+    if (isMobile) {
+      return;
+    }
+
     const lenis = lenisRef.current?.lenis;
 
     if (!lenis) {
@@ -54,7 +71,34 @@ function Index() {
     }
 
     lenis.start();
-  }, [menuOpen]);
+  }, [isMobile, menuOpen]);
+
+  const content = (
+    <div className="bg-black">
+      <Navbar
+        onNavigate={scrollToSection}
+        onOpenMenu={() => setMenuOpen(true)}
+      />
+      <AnimatePresence>
+        {menuOpen && (
+          <MobileMenu
+            onNavigate={scrollToSection}
+            onClose={() => setMenuOpen(false)}
+          />
+        )}
+      </AnimatePresence>
+      <Hero />
+      <About />
+      <Projects />
+      <Skills />
+      <Experience />
+      <Footer onNavigate={scrollToSection} />
+    </div>
+  );
+
+  if (isMobile) {
+    return content;
+  }
 
   return (
     <ReactLenis
@@ -62,24 +106,9 @@ function Index() {
       ref={lenisRef}
       options={{
         autoRaf: true,
-        anchors: true,
       }}
     >
-      <div className="bg-black">
-        <Navbar
-          onNavigate={scrollToSection}
-          onOpenMenu={() => setMenuOpen(true)}
-        />
-        <AnimatePresence>
-          {menuOpen && <MobileMenu onClose={() => setMenuOpen(false)} />}
-        </AnimatePresence>
-        <Hero />
-        <About />
-        <Projects />
-        <Skills />
-        <Experience />
-        <Footer onNavigate={scrollToSection} />
-      </div>
+      {content}
     </ReactLenis>
   );
 }
