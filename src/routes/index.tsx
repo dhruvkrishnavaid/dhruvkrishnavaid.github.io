@@ -1,6 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ReactLenis } from "lenis/react";
+import type { LenisRef } from "lenis/react";
 import { AnimatePresence } from "motion/react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+
+import "lenis/dist/lenis.css";
 
 import About from "@/components/About";
 import Experience from "@/components/Experience";
@@ -17,6 +21,12 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const lenisRef = useRef<LenisRef>(null);
+
+  const scrollToSection = (target: string) => {
+    lenisRef.current?.lenis?.scrollTo(target);
+    setMenuOpen(false);
+  };
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -29,18 +39,47 @@ function Index() {
     }
   }, [menuOpen]);
 
+  useEffect(() => {
+    const lenis = lenisRef.current?.lenis;
+
+    if (!lenis) {
+      return;
+    }
+
+    if (menuOpen) {
+      lenis.stop();
+      return () => {
+        lenis.start();
+      };
+    }
+
+    lenis.start();
+  }, [menuOpen]);
+
   return (
-    <div className="bg-black">
-      <Navbar onOpenMenu={() => setMenuOpen(true)} />
-      <AnimatePresence>
-        {menuOpen && <MobileMenu onClose={() => setMenuOpen(false)} />}
-      </AnimatePresence>
-      <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Experience />
-      <Footer />
-    </div>
+    <ReactLenis
+      root
+      ref={lenisRef}
+      options={{
+        autoRaf: true,
+        anchors: true,
+      }}
+    >
+      <div className="bg-black">
+        <Navbar
+          onNavigate={scrollToSection}
+          onOpenMenu={() => setMenuOpen(true)}
+        />
+        <AnimatePresence>
+          {menuOpen && <MobileMenu onClose={() => setMenuOpen(false)} />}
+        </AnimatePresence>
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Experience />
+        <Footer onNavigate={scrollToSection} />
+      </div>
+    </ReactLenis>
   );
 }

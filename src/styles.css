@@ -147,7 +147,7 @@
   }
   html,
   body {
-    @apply bg-background text-foreground scroll-pt-8 scroll-smooth selection:bg-white/75 selection:text-black/75;
+    @apply bg-background text-foreground scroll-pt-8 selection:bg-white/75 selection:text-black/75;
   }
 }
 

@@ -20,7 +20,7 @@ export default function Projects() {
             </div>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-white/60 sm:text-base">
-            A cross-section across AI, hardware, disaster management, and
+            A cross-section across AI, hardware, community contributions, and
             fintech.
           </p>
         </ScrollReveal>

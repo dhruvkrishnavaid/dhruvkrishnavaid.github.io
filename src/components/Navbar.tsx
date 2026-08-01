@@ -4,18 +4,20 @@ import { useMouseSpotlight } from "#/hooks/useMouseSpotlight";
 import GlassButton from "./common/GlassButton";
 
 interface NavbarProps {
+  onNavigate: (target: string) => void;
   onOpenMenu: () => void;
 }
 
-export default function Navbar({ onOpenMenu }: NavbarProps) {
+export default function Navbar({ onNavigate, onOpenMenu }: NavbarProps) {
   const { handleMouseMove } = useMouseSpotlight();
 
   return (
     <nav className="pointer-events-none fixed top-0 right-0 left-0 z-50">
       <div className="flex items-center justify-between px-5 pt-5 sm:px-8">
         {/* Logo */}
-        <a
-          href="#"
+        <button
+          type="button"
+          onClick={() => onNavigate("#home")}
           className="pointer-events-auto cursor-pointer"
           aria-label="Measured home"
         >
@@ -24,7 +26,7 @@ export default function Navbar({ onOpenMenu }: NavbarProps) {
             alt="Logo"
             className="h-10 w-auto"
           />
-        </a>
+        </button>
 
         {/* Center pill nav */}
         <div className="pointer-events-auto absolute top-4 left-1/2 hidden -translate-x-1/2 md:flex">
@@ -33,13 +35,14 @@ export default function Navbar({ onOpenMenu }: NavbarProps) {
             onMouseMove={handleMouseMove}
           >
             {NAV_ITEMS.map((item) => (
-              <a
+              <button
+                type="button"
                 key={item.label}
-                href={item.href}
+                onClick={() => onNavigate(item.href)}
                 className="relative z-10 cursor-pointer rounded-full px-4 py-1.5 text-sm font-medium text-white/70 transition-all duration-300 hover:text-white"
               >
                 {item.label}
-              </a>
+              </button>
             ))}
             {/* Mouse-following radial glow on nav pill hover */}
             <div

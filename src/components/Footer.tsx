@@ -3,7 +3,11 @@ import { FOOTER_COLUMNS } from "#/data/portfolioData";
 import GlassButton from "./common/GlassButton";
 import ScrollReveal from "./ScrollReveal";
 
-export default function Footer() {
+interface FooterProps {
+  onNavigate: (target: string) => void;
+}
+
+export default function Footer({ onNavigate }: FooterProps) {
   return (
     <footer
       id="contact"
@@ -43,18 +47,24 @@ export default function Footer() {
                 <ul className="space-y-3">
                   {c.links.map((l) => (
                     <li key={l.label}>
-                      <a
-                        href={l.href}
-                        target={l.href.startsWith("#") ? undefined : "_blank"}
-                        rel={
-                          l.href.startsWith("#")
-                            ? undefined
-                            : "noopener noreferrer"
-                        }
-                        className="cursor-pointer text-sm text-white/80 transition-colors hover:text-white"
-                      >
-                        {l.label}
-                      </a>
+                      {l.href.startsWith("#") ? (
+                        <button
+                          type="button"
+                          onClick={() => onNavigate(l.href)}
+                          className="cursor-pointer text-sm text-white/80 transition-colors hover:text-white"
+                        >
+                          {l.label}
+                        </button>
+                      ) : (
+                        <a
+                          href={l.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="cursor-pointer text-sm text-white/80 transition-colors hover:text-white"
+                        >
+                          {l.label}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>
