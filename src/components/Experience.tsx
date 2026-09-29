@@ -32,7 +32,7 @@ export default function Experience() {
                   className="group flex w-full cursor-pointer items-center justify-between gap-6 py-6 text-left"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-lg text-white/90 transition-colors group-hover:text-white sm:text-xl">
+                  <span className="cursor-pointer text-lg text-white/90 transition-colors group-hover:text-white sm:text-xl">
                     {item.title}
                   </span>
                   <span
