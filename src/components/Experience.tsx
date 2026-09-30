@@ -79,12 +79,12 @@ export default function Experience() {
                                   rel="noopener noreferrer"
                                   className="inline-flex cursor-pointer items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/80 transition-all hover:border-white/30 hover:bg-white/10 hover:text-white"
                                 >
-                                  <span>{cert.title}</span>
-                                  <span className="text-white/40">
+                                  <span className="cursor-pointer">{cert.title}</span>
+                                  <span className="text-white/40 cursor-pointer">
                                     ({cert.provider})
                                   </span>
                                   <svg
-                                    className="h-3 w-3 opacity-60"
+                                    className="h-3 w-3 opacity-60 cursor-pointer"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
