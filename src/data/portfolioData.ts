@@ -229,10 +229,15 @@ export const EXPERIENCE_ITEMS: ReadonlyArray<ExperienceItem> = [
     ],
   },
   {
-    title: "Certifications — Tools, Cloud & Emerging Tech",
+    title: "Certifications — Tools, AI/ML, Cloud & Emerging Tech",
     description:
-      "Version control systems, ledger architecture, automated scripts, and developer tooling.",
+      "Version control systems, AI/ML, ledger architecture, automated scripts, and developer tooling.",
     certificates: [
+      {
+        title: "AI Foundations Associate",
+        provider: "Oracle",
+        link: "/certificates/Oracle (AI Foundations Associate).pdf",
+      },
       {
         title: "Git Course",
         provider: "Programming Hub",
